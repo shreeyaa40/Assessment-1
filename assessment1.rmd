@@ -1,0 +1,35 @@
+---
+title: "Assessment1.1"
+author: "Shreeya4648249"
+date: "8/18/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## *R Markdown*
+
+**This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents**. 
+
+[links](https://rmarkdown.rstudio.com)
+
+```{r}
+fastfood <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+```
+```{r}
+head(fastfood, 10)
+```
+```{r}
+knitr::kable(head(fastfood[, 1:5]),"pipe")
+```
+```{r}
+fastfood[fastfood$calories >1000, ]
+```
+```{r}
+fastfood[fastfood$total_fat > 40, ] 
+fastfood[fastfood$total_carb >80, ] 
+```
+
+
