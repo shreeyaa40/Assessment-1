@@ -31,5 +31,19 @@ fastfood[fastfood$calories >1000, ]
 fastfood[fastfood$total_fat > 40, ] 
 fastfood[fastfood$total_carb >80, ] 
 ```
+```{r}
+fastfood %>%
+select (restaurant, item, total_fat, total_carb) %>%
+filter (total_fat > 40 & total_carb > 80)
+dont_eat_this <- fastfood
+```
+```{r}
+fastfood %>%
+filter(restaurant=="Mcdonalds")
+```
+```{r}
+library(skimr)
+summary(fastfood)
+```
 
 
